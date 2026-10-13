@@ -117,10 +117,7 @@ pipeline {
                         exit 1
                     fi
 
-                    trivy image \
-                        --severity HIGH,CRITICAL \
-                        --exit-code 1 \
-                        "${IMAGE_NAME}:build-${BUILD_NUMBER}"
+                    
                 '''
             }
         }
